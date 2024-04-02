@@ -11,20 +11,16 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
-}
-
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    font-family: ;
+    font-family: var(--text-font);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 0.17em;
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1.87;
     background-color: #fff;
-    color: $first-color;
+    color: var(--grayish-dark-blue);
 }
