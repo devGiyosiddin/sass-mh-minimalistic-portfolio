@@ -1,0 +1,76 @@
+@use "/scss/abstract/mixins";
+@use "/scss/abstract/variables";
+
+.header {
+    margin: {
+        top: 32px;
+        bottom: 40px;
+    }
+}
+
+@include mixins.media-sm {
+    max-width: 768px;
+}
+
+@include mixins.media-md {
+    max-width: 1111px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    &-icon {
+        display: block;
+        width: 60px;
+        height: 32px;
+        color: $first-color;
+        
+        &:hover {
+            color: $second-color;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    
+    &-menu {
+        display: block;
+        cursor: pointer;
+        
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    }
+    
+    &-list {
+        display: none;
+        list-style: none;
+    }
+    
+    @include mixins.media-sm {
+        &-menu {
+            display: none;
+        }
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-item:not(:last-child) {
+            margin-right: 42px;
+        }
+        &-item  a {
+            color: $first-color;
+            
+            &:hover {
+                color: $second-color;
+            }
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+    
+}

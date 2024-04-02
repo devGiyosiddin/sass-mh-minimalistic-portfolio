@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: ;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    background-color: #fff;
+    color: $first-color;
+}
