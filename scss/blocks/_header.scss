@@ -59,4 +59,11 @@
             }
         }
     }
+
+    &--open {
+        .nav-list {
+            display: block;
+            position: absolute;
+        }
+    }
 }

@@ -504,6 +504,10 @@ body {
     opacity: 0.5;
   }
 }
+.header--open .nav-list {
+  display: block;
+  position: absolute;
+}
 
 .site-footer {
   flex-grow: 1;
