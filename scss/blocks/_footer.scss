@@ -1,0 +1,31 @@
+.site-footer {
+    background-color: var(--grayish-dark-blue);
+}
+.site-footer__container {
+    @include flex;
+
+    nav {
+        @include flex-column;
+        
+    }
+}
+.nav {
+}
+.nav-icon {
+}
+.nav-menu {
+}
+.nav-menu__icon {
+}
+.nav-list {
+}
+.nav-item {
+}
+.nav__item-link {
+}
+.site-footer__socials {
+}
+.site-footer__social-item {
+}
+.site-footer__socials-link {
+}

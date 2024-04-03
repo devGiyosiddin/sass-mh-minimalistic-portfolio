@@ -451,11 +451,16 @@ body {
   display: block;
   cursor: pointer;
 }
-.nav-menu:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.nav-menu svg {
+  transition: var(--trs-dur);
+}
+.nav-menu svg:hover {
+  transform: scale(1.2);
 }
 .nav-list {
   display: none;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 @media only screen and (min-width: 768px) {
@@ -487,4 +492,17 @@ body {
 .header {
   margin-top: 32px;
   margin-bottom: 40px;
+}
+
+.site-footer {
+  background-color: var(--grayish-dark-blue);
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: center;
+}
+.site-footer__container nav {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */
