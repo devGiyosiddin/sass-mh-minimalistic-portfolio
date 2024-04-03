@@ -545,6 +545,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.site-footer__container .nav-item {
+  padding: 5px;
+}
 .site-footer__container .nav-item:not(:last-child) {
   margin-bottom: 32px;
   margin-right: 0;

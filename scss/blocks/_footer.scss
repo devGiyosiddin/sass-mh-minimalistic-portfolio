@@ -32,6 +32,8 @@
                 @include flex-column;
             }
             &-item {
+                padding: 5px;
+                
                 &:not(:last-child) {
                     margin-bottom: 32px;
                     margin-right: 0;
