@@ -1,7 +1,6 @@
 /* Sitenav */
 .nav {
-    display: flex;
-    align-items: center;
+    @include flex;
     justify-content: space-between;
     
     &-icon {
@@ -26,14 +25,18 @@
         display: block;
         cursor: pointer;
         
-        &:hover {
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        svg {
+            transition: var(--trs-dur);
+        }
+        svg:hover {
+            transform: scale(1.2);
+            // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
     }
     
     &-list {
         display: none;
-        list-style: none;
+        @include list-unstyled
     }
     @include media-md {
         &-menu {
