@@ -27,9 +27,9 @@
                 @include flex-column;
             }
             &-item {
-                transition: var(--trs-dur);
                 &:not(:last-child) {
                     margin-bottom: 32px;
+                    margin-right: 0;
                 }
             }
             &-item:hover {
@@ -62,8 +62,4 @@
             color: var(--cyan);
         }
     }
-}
-.site-footer__social-item {
-}
-.site-footer__socials-link {
 }

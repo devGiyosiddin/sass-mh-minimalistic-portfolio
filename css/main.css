@@ -432,66 +432,77 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.nav-icon {
-  display: block;
-  width: 60px;
-  height: 32px;
-  color: var(--grayish-dark-blue);
-}
-.nav-icon:hover {
-  color: var(--cyan);
-}
-.nav-icon:hover {
-  opacity: 0.7;
-}
-.nav-icon svg {
-  transition: var(--trs-dur);
-}
-.nav-menu {
-  display: block;
-  cursor: pointer;
-}
-.nav-menu svg {
-  transition: var(--trs-dur);
-}
-.nav-menu svg:hover {
-  transform: scale(1.2);
-}
 .nav-list {
   display: none;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-@media only screen and (min-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  .nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-item:not(:last-child) {
-    margin-right: 42px;
-  }
-  .nav-item a {
-    color: var(--grayish-dark-blue);
-    text-decoration: none;
-    transition: var(--trs-dur);
-  }
-  .nav-item a:hover {
-    color: var(--cyan);
-  }
-  .nav-item a:active {
-    opacity: 0.5;
-  }
+.nav-item {
+  transition: var(--trs-dur);
+}
+.nav-item a {
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: normal;
+  text-decoration: none;
+  transition: var(--trs-dur);
 }
 
 /* HEADER */
 .header {
   margin-top: 32px;
   margin-bottom: 40px;
+}
+.header .nav-icon {
+  display: block;
+  width: 60px;
+  height: 32px;
+  color: var(--grayish-dark-blue);
+}
+.header .nav-icon:hover {
+  color: var(--cyan);
+}
+.header .nav-icon:hover {
+  opacity: 0.7;
+}
+.header .nav-icon svg {
+  transition: var(--trs-dur);
+}
+.header .nav-menu {
+  display: block;
+  cursor: pointer;
+}
+.header .nav-menu svg {
+  transition: var(--trs-dur);
+}
+.header .nav-menu svg:hover {
+  transform: scale(1.2);
+}
+@media only screen and (min-width: 768px) {
+  .header .nav-menu {
+    display: none;
+  }
+  .header .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .nav-item:not(:last-child) {
+    margin-right: 42px;
+  }
+  .header .nav-item a {
+    color: var(--grayish-dark-blue);
+  }
+  .header .nav-item a:hover {
+    color: var(--cyan);
+  }
+  .header .nav-item a:active {
+    opacity: 0.5;
+  }
 }
 
 .site-footer {
@@ -528,11 +539,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.site-footer__container .nav-item {
-  transition: var(--trs-dur);
-}
 .site-footer__container .nav-item:not(:last-child) {
   margin-bottom: 32px;
+  margin-right: 0;
 }
 .site-footer__container .nav-item:hover {
   padding: 5px;

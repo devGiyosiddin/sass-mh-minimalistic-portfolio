@@ -3,64 +3,23 @@
     @include flex;
     justify-content: space-between;
     
-    &-icon {
-        display: block;
-        width: 60px;
-        height: 32px;
-        color: var(--grayish-dark-blue);
-        
-        &:hover {
-            color: var(--cyan);
-        }
-        &:hover {
-            opacity: 0.7;
-        }
-
-        svg {
-            transition: var(--trs-dur);
-        }
-    }
-    
-    &-menu {
-        display: block;
-        cursor: pointer;
-        
-        svg {
-            transition: var(--trs-dur);
-        }
-        svg:hover {
-            transform: scale(1.2);
-            // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        }
-    }
-    
     &-list {
         display: none;
-        @include list-unstyled
+        @include list-unstyled;
     }
-    @include media-md {
-        &-menu {
-            display: none;
-        }
-        &-list {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        &-item:not(:last-child) {
-            margin-right: 42px;
-        }
-        &-item  a {
-            color: var(--grayish-dark-blue);
+    
+    &-item {
+        transition: var(--trs-dur);
+
+        a {
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 400;
+            font-size: 0.75rem;
+            line-height: normal;
             text-decoration: none;
             transition: var(--trs-dur);
-            
-            &:hover {
-                color: var(--cyan);
-            }
-            &:active {
-                opacity: 0.5;
-            }
         }
     }
 }
