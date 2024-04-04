@@ -436,7 +436,7 @@ body {
   display: flex;
 }
 .nav-list {
-  display: none;
+  display: block;
   transition: 0.5s ease;
   padding: 0;
   margin: 0;
@@ -477,6 +477,14 @@ body {
   transition: var(--trs-dur);
 }
 .header .nav-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  transform: translateX(-100%);
   transition: 0.5s cubic-bezier(0.77, 0, 0.18, 1);
 }
 .header .nav-menu {
@@ -497,6 +505,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: static;
+    width: auto;
+    height: auto;
+    transform: translateX(0);
   }
   .header .nav-item:not(:last-child) {
     margin-right: 42px;
@@ -524,6 +536,7 @@ body {
   background-color: #7e7e7e;
   padding: 50px;
   z-index: 1;
+  transform: translateX(0);
 }
 .header--open .nav-list li {
   padding: 7px;

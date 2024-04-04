@@ -8,7 +8,7 @@
     }
 
     &-list {
-        display: none;
+        display: block;
         transition: 0.5s ease;
         @include list-unstyled;
     }
