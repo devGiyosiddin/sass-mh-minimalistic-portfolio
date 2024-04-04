@@ -28,6 +28,7 @@
             }
             
             &-list {
+                position: static;
                 @include list-unstyled;
                 @include flex-column;
             }
