@@ -17,12 +17,16 @@
             &:hover {
                 opacity: 0.7;
             }
-    
+            
             svg {
                 transition: var(--trs-dur);
             }  
         }
 
+        &-list {
+            left: -350px;
+        }
+        
         &-menu {
             display: block;
             cursor: pointer;
@@ -32,7 +36,6 @@
             }
             svg:hover {
                 transform: scale(1.2);
-                // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
         }
         @include media-md {
@@ -49,7 +52,7 @@
             }
             &-item  a {
                 color: var(--grayish-dark-blue);
-
+                
                 &:hover {
                     color: var(--cyan);
                 }
@@ -59,11 +62,39 @@
             }
         }
     }
-
+    
     &--open {
         .nav-list {
-            display: block;
             position: absolute;
+            @include flex-column;
+            width: 70vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #888;
+            padding: 50px;
+            z-index: 1;
+            // transform: translateX(0);
+
+
+            li {
+                padding: 7px;
+
+                &:hover {
+                    background-color: orange;
+                    border-radius: 10px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+                }
+            a {
+                color: #fff;
+                font-size: 1rem;
+            }
         }
+        
     }
 }
